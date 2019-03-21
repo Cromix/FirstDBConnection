@@ -3,6 +3,7 @@ package com.cromixsoft.Dashboard.controllers;
 import com.cromixsoft.Dashboard.models.City;
 import com.cromixsoft.Dashboard.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,7 @@ public class CityController {
     }
 
     //
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/allUsers")
     public List<City> allCities() {
         System.out.println(cityRepository.findById(712));
